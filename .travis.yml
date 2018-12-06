@@ -20,13 +20,11 @@ install:
 - sudo -E ./scripts/travis/install-deps.sh
 - "./scripts/travis/setup-venv.sh ~/venv"
 - source ~/venv/bin/activate
-- "./scripts/travis/install-python-deps.sh"
 before_script:
-- "./scripts/travis/configure.sh"
 - sudo apt-get install sshpass
 script:
-- "./scripts/travis/build.sh"
-- "./scripts/travis/test.sh"
+- "./scripts/travis/mlubuild.sh"
+- "./scripts/travis/mlutest.sh"
 notifications:
   email:
     on_success: always
