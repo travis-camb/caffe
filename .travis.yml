@@ -23,8 +23,8 @@ install:
 before_script:
 - sudo apt-get install sshpass
 script:
-- "chmod +x ./scripts/travis/mlubuild.sh && ./scripts/travis/mlubuild.sh"
-- "chmod +x ./scripts/travis/mlutest.sh && ./scripts/travis/mlutest.sh"
+- "./scripts/travis/mlubuild.sh"
+- "./scripts/travis/mlutest.sh"
 notifications:
   email:
     on_success: always
