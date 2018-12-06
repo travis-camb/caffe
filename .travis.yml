@@ -17,7 +17,6 @@ before_install:
 - source ./scripts/travis/defaults.sh
 - tar xvf build_test.tar -C scripts/travis/
 install:
-#- sudo -E ./scripts/travis/install-deps.sh
 - "./scripts/travis/setup-venv.sh ~/venv"
 - source ~/venv/bin/activate
 before_script:
